@@ -19,11 +19,17 @@ public:
 
     virtual void BeginPlay() override;
 
+    void openToolBar();
+
 protected:
     UPROPERTY(EditAnywhere, Category = "UI")
-    TSubclassOf<class UUW_smMain> MyWidgetClass;
+    TSubclassOf<class UUW_smMain> MainWidgetClass;
+
+    UPROPERTY(EditAnywhere, Category = "UI")
+    TSubclassOf<class UUW_smMain> ToolBarWidgetClass;
 
 private:
-    UUW_smMain* MyWidget;
+    UUW_smMain* MainWidget;
+    UUW_smMain* ToolBarWidget;
 	
 };
